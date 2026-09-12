@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "queries": "node queries.js",
-    "populate": "node populate_db.js"
+    "populate": "node populate_db.js",
+    "seed": "node scripts/seed.js"
   },
   "type": "module",
   "keywords": [],

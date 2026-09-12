@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ThreadSchema = new mongoose.Schema({
+const threadSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -11,13 +11,13 @@ const ThreadSchema = new mongoose.Schema({
   },
   author: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
     required: true,
+    ref: "User",
   },
   subreddit: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Subreddit",
     required: true,
+    ref: "Subreddit",
   },
   upvotes: {
     type: Number,
@@ -37,6 +37,6 @@ const ThreadSchema = new mongoose.Schema({
   },
 });
 
-const Thread = mongoose.model("Thread", ThreadSchema);
+const Thread = mongoose.model("Thread", threadSchema);
 
 export default Thread;
